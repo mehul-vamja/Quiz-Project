@@ -21,7 +21,7 @@ const FinalPage = ({score,
         SetShowStartPage(true);
         setScore(0);
         setUsername("");
-    }
+    };
 
     return (
         <Card>

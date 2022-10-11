@@ -8,19 +8,19 @@
 }
 
 .username {
-  width: 60%;
+  width: 30%;
   padding: 1rem;
   border-radius: 10px;
   display: block;
   margin: 3rem auto 5rem auto;
   font-size: 1rem;
-  background-color: whitesmoke;
+  background-color: #fff;
   border: 1px solid black;
 }
 
 .start_btn {
   border: 0;
-  width: 60%;
+  width: 30%;
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;

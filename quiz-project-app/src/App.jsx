@@ -3,6 +3,7 @@ import "./App.css";
 import FinalPage from "./components/FinalPage";
 import QuestionsPage from "./components/QuestionsPage";
 import StartPage from "./components/StartPage";
+import Navbar from "./components/Navbar";
 
 function App() {
     const [showStartPage, setShowStartPage] = useState(true);
@@ -15,12 +16,13 @@ function App() {
     const [username, setUsername] = useState("");
 
   return <>
-    {showStartPage && (<StartPage 
+    <Navbar/>
+    {showStartPage && <StartPage 
         setShowStartPage={setShowStartPage} 
         setShowQuestionsPage={setShowQuestionsPage} 
         bestScore={bestScore} 
         username={username} 
-        setUsername={setUsername} />)}
+        setUsername={setUsername} />}
 
     {showQuestionsPage && <QuestionsPage 
         score={score} 
@@ -29,14 +31,14 @@ function App() {
         setShowFinalPage={setShowFinalPage} />}
 
     {showFinalPage && <FinalPage
-    score={score} 
-    setScore={setScore}
-    bestScore={bestScore}
-    setBestScore={setBestScore} 
-    showStartPage={setShowStartPage}
-    showFinalPage={showFinalPage}
-    username={username} 
-    setUsername={setUsername} />}
+        score={score} 
+        setScore={setScore}
+        bestScore={bestScore}
+        setBestScore={setBestScore} 
+        setShowStartPage={setShowStartPage}
+        setShowFinalPage={setShowFinalPage}
+        username={username} 
+        setUsername={setUsername} />}
   </>;
 }
 

@@ -2,35 +2,41 @@ import React from "react";
 import Card from "./Card";
 import './FinalPage.css';
 
-const FinalPage = ({score,
+const FinalPage = ({
+    score,
     setShowFinalPage,
-    SetShowStartPage,
+    setShowStartPage,
+    setShowQuestionsPage,
     bestScore,
     setBestScore,
     setScore,
     username,
-    setUsername
+    setUsername,
     }) => {
 
     const handleClick = () => {
-        if(score>bestScore){
-            setBestScore(score);
+        
+        if(score > bestScore){
+            setBestScore(score);                                    
         }
 
         setShowFinalPage(false);
-        SetShowStartPage(true);
+        setShowQuestionsPage(true);
+        // setShowStartPage(true);       
         setScore(0);
         setUsername("");
+        
     };
+
 
     return (
         <Card>
-            <h1 className="header">Congratulations! <br/> You have finished the quiz. <br/> {username} </h1>
-            <h3 className="prime_txt">Final Score: </h3>
-            <h3 className="final_score">{score}</h3>
-            <button className="play_again_btn" onClick={handleClick} >Play Again</button>
+            <h1 className="header">Congratulations! <br/> You have finished the quiz. <br/><br/><br/> {username} </h1>
+            <h3 className="prime_txt">Your Final Score: </h3>
+            <h3 className="final_score">{score}/10</h3>
+            <button className="play_again_btn" onClick={handleClick}>Submit Quiz</button>
         </Card>
-    )
-}
+    );
+};
 
 export default FinalPage;

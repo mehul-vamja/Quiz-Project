@@ -12,6 +12,8 @@
   display: block;
   margin: 5rem auto 0 auto;
   cursor: pointer;
+  width: 15%;
+  height: 7%;
   font-size: 1rem;
   font-weight: bold;
   padding: 10px 1rem;

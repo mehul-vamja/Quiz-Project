@@ -13,12 +13,12 @@ const Question = ({questionIndex,
         const handleClick = (isCorrect) => {
             if(questionIndex<9){
                 if(isCorrect){
-                    setScore((score) => score += 100);
+                    setScore((score) => score += 1);
                 }
                 setQuestionIndex((prevIndex) => prevIndex +1);
             }else{
                 if(isCorrect){
-                    setScore((score) => score += 100);
+                    setScore((score) => score += 1);
                 }
                 setShowQuestionsPage(false);
                 setShowFinalPage(true);
@@ -27,17 +27,24 @@ const Question = ({questionIndex,
 
     return (
         <Card>
-            <h1 className="question">{questions[questionIndex].questionText}</h1>
 
-            <div className="options">
-                {questions[questionIndex].answers.map((answer, index)=>
-                    <div className="answer" key={index} onClick={() => handleClick(answer.correctAnswer)} ><p>{answer.answerText}</p></div>
-                )}
+            <div className="maindiv">
+                <div>
+                    <h1 className="question">{questions[questionIndex].questionText}</h1>
+                    <p className="dummytxt">Select one correct answer from given options.</p>
+                </div>
+
+                <div className="options">
+                    {questions[questionIndex].answers.map((answer, index)=>
+                        <div className="option" key={index} onClick={() => handleClick(answer.correctAnswer)} ><p>{answer.answerText}</p></div>
+                    )}
+                </div>
+            
             </div>
 
-            <p className="score">
+            {/* <p className="score">
                 Score: <span>{score}</span>
-            </p>
+            </p> */}
 
             <p className="question_number">
                 Question <span>{questionIndex + 1}</span>/10

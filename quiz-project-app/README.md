@@ -1,3 +1,5 @@
+This is a Quiz Test taking Web Application. On the start page enter Username to start quiz. There are two quiz of 10 multiple choice questions, you can give it seperatly from quiz1 and quiz2. After completing each quiz you can submit your records of test by clicking Submit button.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

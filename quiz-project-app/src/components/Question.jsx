@@ -7,7 +7,6 @@ const Question = ({questionIndex,
     questions,
     setShowQuestionsPage,
     setShowFinalPage,
-    score,
     setScore}) => {
 
         const handleClick = (isCorrect) => {
@@ -27,11 +26,10 @@ const Question = ({questionIndex,
 
     return (
         <Card>
-
             <div className="maindiv">
                 <div>
                     <h1 className="question">{questions[questionIndex].questionText}</h1>
-                    <p className="dummytxt">Select one correct answer from given options.</p>
+                    <p className="dummytxt">Select one correct answer from the given options.</p>
                 </div>
 
                 <div className="options">
@@ -41,11 +39,6 @@ const Question = ({questionIndex,
                 </div>
             
             </div>
-
-            {/* <p className="score">
-                Score: <span>{score}</span>
-            </p> */}
-
             <p className="question_number">
                 Question <span>{questionIndex + 1}</span>/10
             </p>

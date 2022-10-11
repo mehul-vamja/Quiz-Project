@@ -6,7 +6,6 @@ const FinalPage = ({
     score,
     setShowFinalPage,
     setShowStartPage,
-    setShowQuestionsPage,
     bestScore,
     setBestScore,
     setScore,
@@ -19,22 +18,18 @@ const FinalPage = ({
         if(score > bestScore){
             setBestScore(score);                                    
         }
-
         setShowFinalPage(false);
-        setShowQuestionsPage(true);
-        // setShowStartPage(true);       
+        setShowStartPage(true);       
         setScore(0);
         setUsername("");
-        
     };
-
 
     return (
         <Card>
             <h1 className="header">Congratulations! <br/> You have finished the quiz. <br/><br/><br/> {username} </h1>
-            <h3 className="prime_txt">Your Final Score: </h3>
+            <h3 className="prime_txt">Your Score is: </h3>
             <h3 className="final_score">{score}/10</h3>
-            <button className="play_again_btn" onClick={handleClick}>Submit Quiz</button>
+            <button className="return_btn" onClick={handleClick}>Home Page</button>
         </Card>
     );
 };
